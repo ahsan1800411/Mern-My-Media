@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+.pt-72 {
+  padding-top: 18rem;
+}
+
+/* Accordion Customize */
+.accordion-button:not(.collapsed) {
+  color: #012054 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.divider {
+  position: relative;
+  background-color: #1b3663;
+  color: white;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: #3dbec3;
+  width: 4px;
+  left: 0;
+  top: 0;
+}
+
+.border-bottom {
+  position: relative;
+  cursor: pointer;
+}
+
+.border-bottom::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background-color: slategray;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .divider::before {
+    width: 6px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+/* Table Design */
+
+@media (min-width: 640px) {
+  table {
+    display: inline-table !important;
+  }
+
+  thead tr:not(:first-child) {
+    display: none;
+  }
+}
+
+td:not(:last-child) {
+  border-bottom: 0;
+}
+
+td {
+  color: #012054;
+  font-weight: 500;
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+input:focus-visible {
+  outline: none !important;
+}
